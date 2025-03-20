@@ -13,19 +13,32 @@ body {
 /* Mobile-First Responsive Design: HEADER STYLING */
 
 header {
+    grid-area: header;
     background-color: #ffffff;
     width: 100%;
     height: 100px;
+    display: flex;
+    flex-flow: column;
+    justify-content:space-around;
+}
+
+.header-logo {
+    text-align: center;
+}
+
+header .logo-img {
+    max-width: 40%;
 }
 
 header .header-brand {
     font-size: 24px;
     font-weight: 900;
     color: #111111;
-    display: block; 
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px 0;
+    align-self: center;
+    /* display: block;  */
+    /* margin: 0 auto; */
+    /* text-align: center; */
+    /* padding: 20px 0; */
 }
 
 header nav ul {
@@ -39,14 +52,16 @@ header nav ul li {
 
 header nav ul li a{
     font-size: 16px;
-    color: #111111;
+    /* color: #111111; */
+    color: #182E67;
+    font-weight: 600;
 }
 
 header .header-signup {
     display: none;
 }
 
-/* Mobile-First Responsive Design: INDEX.HTML STYLING*/
+/* Mobile-First Responsive Design: HERO SECTION STYLING*/
 
 .landing-hero {
     display: flex;
@@ -82,8 +97,105 @@ header .header-signup {
 
 .landing-hero button {
     width: 30%;
-    height: 40px;
+    height: 48px;
     border: 1px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #01BDD6;
+    color: #111111;
+}
+
+/* Mobile-First Responsive Design: FEATURES SECTION STYLING*/
+
+/* .landing-features { */
+.landing-grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header"
+    "feature-item-1" 
+    "feature-item-2" 
+    "feature-item-3"
+    "footer";
+    /* gap: 20px; */
+}
+
+.feature-item-1 {
+    grid-area: feature-item-1;
+}
+
+.feature-item-2 {  
+    grid-area: feature-item-2;
+}
+
+.feature-item-3 {
+    grid-area: feature-item-3;
+}
+
+.feature-img {
+    max-width: 100%;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h3.feature-title {
+    color: #111111;
+}
+
+h3.contact-title {
+    color: #ffffff;
+}
+
+p.feature-description {
+    text-align: justify;
+}
+
+.grid-item {
+    margin-bottom: 10px;
+    padding: 0 10px;
+}
+
+header.grid-item {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.landing-hero {
+    padding: 0;
+}
+
+/* Mobile-First Responsive Design: FOOTER SECTION STYLING*/
+
+footer {
+    grid-area: footer;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background-color: #333;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+footer.grid-item {
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+footer ul li {
+    list-style: none;    
+}
+
+footer a {
+    color:#f3f3f3;
+}
+
+footer p {
+    margin-top: 10px;
 }
