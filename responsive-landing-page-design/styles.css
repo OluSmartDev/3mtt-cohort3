@@ -60,6 +60,44 @@ header .header-signup {
     white-space: nowrap; */
 }
 
+/* Desktop Responsive Design: HEADER STYLING */
+
+@media (min-width: 768px) {
+    
+    header {
+        flex-wrap: nowrap; /* Keep items in one row on desktop */        
+    }
+
+    .header-logo {
+        text-align: left;
+        padding-left: 20px;
+        flex: 1 1 200px;
+        border-right: 2px solid #01BDD6; 
+    }
+    
+    header nav ul {
+        justify-self: start;
+        padding: 0;
+        margin: 10px;    
+    }
+
+    header nav ul li {
+        margin: 20px;    
+    }
+    
+    header nav ul li a{
+        font-size: 20px;
+        color: #182E67;
+        font-weight: 600;
+    }
+    
+    header .header-signup {
+        display: none;
+    }
+}
+
+
+
 /* Mobile-First Responsive Design: HERO SECTION STYLING*/
 
 .landing-hero {
@@ -202,42 +240,4 @@ footer a {
 
 footer p {
     margin-top: 10px;
-}
-
-/* Desktop Responsive Design: HEADER STYLING */
-
-@media (min-width: 768px) {
-    
-    header {
-        flex-wrap: nowrap; /* Keep items in one row on desktop */        
-    }
-
-    .header-logo {
-        text-align: left;
-        padding-left: 20px;
-        /* flex: 1 1 28%; */
-        flex: 1 1 200px;
-        border-right: 2px solid #01BDD6; 
-        /* line-height: 0.2;    */
-    }
-    
-    header nav ul {
-        justify-self: start;
-        padding: 0;
-        margin: 10px;    
-    }
-
-    header nav ul li {
-        margin: 20px;    
-    }
-    
-    header nav ul li a{
-        font-size: 20px;
-        color: #182E67;
-        font-weight: 600;
-    }
-    
-    header .header-signup {
-        display: none;
-    }
 }
