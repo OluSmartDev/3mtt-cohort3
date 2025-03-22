@@ -96,8 +96,6 @@ header .header-signup {
     }
 }
 
-
-
 /* Mobile-First Responsive Design: HERO SECTION STYLING*/
 
 .landing-hero {
@@ -114,25 +112,27 @@ header .header-signup {
     color: #ffffff;
 }
 
-.landing-hero h1 {
+h1.hero-heading  {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     /* font-size: 2rem; */
     font-weight: 900;
     text-align: center;
     text-shadow: 1px 1px 4px #111111;
     text-transform: uppercase;
+    width: 350px;
 }
 
-.landing-hero h2 {
+h2.hero-subheading {
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     /* font-size: 1.7rem; */
     font-weight: 100;
     font-style: italic;
     text-align: center;
     text-shadow: 1px 2px 8px #111111;
+    width: 450px;
 }
 
-.landing-hero button {
+button.hero-cta {
     width: 30%;
     height: 48px;
     border: 1px solid #ffffff;
@@ -142,6 +142,27 @@ header .header-signup {
     font-weight: 600;
     background-color: #01BDD6;
     color: #111111;
+}
+
+@media (min-width: 768px) {
+    .landing-hero {
+        /* height: 450px; */
+    }
+
+    h1.hero-heading {
+        font-size: 3rem;
+        width: 650px;
+    }
+
+    h2.hero-subheading {
+        font-size: 1.5rem;
+        width: 600px;
+    }
+
+    button.hero-cta {
+        width: 10%;
+        /* padding: 5px 5px; */
+    }
 }
 
 /* Mobile-First Responsive Design: FEATURES SECTION STYLING*/
